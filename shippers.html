@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Request a Quote — SNP Logistics LLC</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header container">
+    <a class="logo" href="/"><img src="assets/icons/logo.svg" alt="logo"/></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Request a Quote</h1>
+    <form id="quoteForm" class="form">
+      <label>Name<input name="name" required></label>
+      <label>Company<input name="company"></label>
+      <label>Email<input name="email" type="email" required></label>
+      <label>Phone<input name="phone" required></label>
+      <label>Origin City<input name="origin"></label>
+      <label>Destination City<input name="destination"></label>
+      <label>Freight Type<input name="freight"></label>
+      <label>Weight<input name="weight" type="number"></label>
+      <label>Equipment Type<select name="equipment"><option>Dry Van</option><option>Flatbed</option><option>Reefer</option></select></label>
+      <label>Message<textarea name="message"></textarea></label>
+      <button class="btn" type="submit">Submit</button>
+    </form>
+  </main>
+
+  <script src="js/main.js"></script>
+  <footer class="site-footer container">&copy; SNP Logistics LLC</footer>
+</body>
+</html>
