@@ -86,3 +86,18 @@ header.site-header.container{padding-left:0;padding-right:.75rem}
 @media(max-width:900px){
 	.why-grid{grid-template-columns:1fr}
 }
+
+/* Compact Why section on homepage */
+.why-home{padding:2rem 0;background:transparent}
+.why-home h2{margin:0 0 .25rem}
+.why-home .muted{margin-bottom:.75rem}
+.why-home__stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;align-items:center}
+.why-home__stat{padding:1rem;text-align:center}
+.why-home__stat .stat__value{font-size:1.6rem}
+.why-home__stat .stat__label{font-size:.9rem;color:var(--muted)}
+.why-home__cta{display:flex;align-items:center;justify-content:center}
+
+@media(max-width:700px){
+	.why-home__stats{grid-template-columns:1fr;gap:.75rem}
+	.why-home__cta{padding:0.25rem}
+}
