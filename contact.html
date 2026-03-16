@@ -11,26 +11,45 @@
     <a class="logo" href="/"><img src="assets/icons/logo.svg" alt="logo"/></a>
     <nav>
       <a href="index.html">Home</a>
+      <a href="why-us.html">Why Choose Us</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
     </nav>
   </header>
 
   <main class="container contact-page">
-    <h1>Contact</h1>
-    <p>Address: 1151 Heights pkwy, Canton, 30115</p>
-    <p>Phone: 6268796294</p>
-    <p>Contact Email: manager@snplogistics.org</p>
-    <p>Billing Email: manager@snplogistics.org</p>
-    <p>Carrier Payments: manager@snplogistics.org</p>
+    <h1>Contact Us</h1>
+    <p class="muted">Questions, quotes or carrier inquiries — reach out and we'll respond promptly.</p>
 
-    <h2>Send a message</h2>
-    <form id="contactForm" class="form">
-      <label>Name<input name="name" required></label>
-      <label>Email<input name="email" type="email" required></label>
-      <label>Message<textarea name="message"></textarea></label>
-      <button class="btn" type="submit">Send</button>
-    </form>
+    <div class="contact-grid">
+      <div class="card contact-card">
+        <h2>Send a message</h2>
+        <form id="contactForm" class="form">
+          <label>Full name
+            <input name="name" required placeholder="Your full name">
+          </label>
+          <label>Email
+            <input name="email" type="email" required placeholder="you@example.com">
+          </label>
+          <label>Phone
+            <input name="phone" placeholder="(555) 555-5555">
+          </label>
+          <label>Message
+            <textarea name="message" rows="6" placeholder="Tell us about your shipment"></textarea>
+          </label>
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <aside class="contact-card card">
+        <h3>Contact info</h3>
+        <p><span class="icon">📞</span> <strong>Phone:</strong> <a href="tel:18006265375">1-800-626-5375</a></p>
+        <p><span class="icon">✉️</span> <strong>Email:</strong> <a href="mailto:manager@snplogistics.org">manager@snplogistics.org</a></p>
+        <p><span class="icon">📍</span> <strong>Address:</strong> 1151 Heights Pkwy, Canton, 30115</p>
+        <hr>
+        <p class="muted">Office hours: Mon–Fri 8:30am–5:30pm</p>
+      </aside>
+    </div>
   </main>
 
   <script src="js/main.js"></script>
