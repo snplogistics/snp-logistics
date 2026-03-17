@@ -1,6 +1,9 @@
 :root{--accent:#0b63d6;--muted:#666}
 *{box-sizing:border-box;font-family:Inter,system-ui,Arial,sans-serif}
 body{margin:0;color:#111;line-height:1.4}
+.site-header{position:fixed;top:0;left:0;right:0;background:#fff;z-index:1000;box-shadow:0 2px 8px rgba(10,20,40,0.06)}
+/* ensure page content isn't hidden behind the fixed header */
+body{padding-top:120px}
 .container{max-width:1000px;margin:0 auto;padding:1rem}
 .site-header{display:flex;justify-content:space-between;align-items:center;padding:0.5rem 0}
 .logo{display:flex;align-items:center;gap:.5rem;text-decoration:none;color:inherit}
@@ -31,6 +34,10 @@ header.site-header.container{padding-left:0;padding-right:.75rem}
 	/* less negative on mobile to avoid overlap */
 	.logo{margin-left:-24px}
 	.logo img{height:56px}
+}
+
+@media(max-width:800px){
+  body{padding-top:88px}
 }
 
 /* Testimonials section styles */
@@ -100,4 +107,65 @@ header.site-header.container{padding-left:0;padding-right:.75rem}
 @media(max-width:700px){
 	.why-home__stats{grid-template-columns:1fr;gap:.75rem}
 	.why-home__cta{padding:0.25rem}
+}
+
+/* Request Quote page styles */
+.quote-hero{position:relative;background-size:cover;background-position:center;padding:3.5rem 0;color:#fff;}
+.quote-hero{background-image: -webkit-image-set(url("../assets/quote-hero-1200.webp") 1x, url("../assets/quote-hero-1200.jpg") 1x);}
+.quote-hero{background-image: image-set(url("../assets/quote-hero-1200.webp") type("image/webp") 1x, url("../assets/quote-hero-1200.jpg") type("image/jpeg") 1x);}
+.quote-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(3,9,23,0.45),rgba(3,9,23,0.35));z-index:0}
+.quote-hero .muted{color:rgba(255,255,255,0.95);position:relative;z-index:1}
+.quote-form{margin:2rem 0}
+.quote-wizard .wizard-head{padding:0 1rem 1rem}
+.step-indicators{display:flex;gap:.5rem}
+.step-indicator{width:32px;height:32px;border-radius:50%;background:#eef4fb;color:var(--muted);display:inline-flex;align-items:center;justify-content:center;font-weight:700}
+.step-indicator.active{background:var(--accent);color:#fff}
+.wizard-step{padding:1rem}
+.equipment-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.5rem}
+.option{display:flex;gap:.6rem;align-items:center;padding:.8rem;border:1px solid #e6eef8;border-radius:10px;background:#fff;cursor:pointer;transition:transform .12s ease,box-shadow .12s ease}
+.option img{width:40px;height:40px;flex:0 0 40px}
+.option span{font-weight:600}
+.option input{margin-right:.5rem}
+.option:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(12,40,80,.06)}
+.option input{position:relative;z-index:2}
+
+/* Selected equipment styling */
+.option.selected{border-color:var(--accent);box-shadow:0 12px 30px rgba(11,99,214,0.14);transform:translateY(-6px)}
+.option.selected img{filter:drop-shadow(0 4px 10px rgba(11,99,214,0.12))}
+
+/* Header shrink styles */
+.site-header{transition:all .28s ease}
+.site-header .logo img{height:96px;transition:height .28s ease}
+.site-header.shrink{padding-top:6px;padding-bottom:6px;box-shadow:0 6px 18px rgba(10,20,40,0.08)}
+.site-header.shrink .logo img{height:56px}
+
+/* Active nav link */
+.site-header nav a.active,
+.site-header nav a[aria-current="page"]{
+	color:var(--accent);
+	font-weight:700;
+	position:relative;
+}
+.site-header nav a.active::after,
+.site-header nav a[aria-current="page"]::after{
+	content:"";
+	position:absolute;
+	left:0;right:0;bottom:-8px;height:3px;background:var(--accent);border-radius:3px;margin:0 auto;width:60%;
+}
+.wizard-actions{display:flex;gap:.5rem;justify-content:flex-end;margin-top:1rem}
+.back-btn{background:transparent;border:1px solid #cbd7e6}
+.btn-primary{background:var(--accent);color:#fff}
+
+@media(max-width:700px){
+	.quote-hero{padding:2rem}
+	.step-indicators{justify-content:center}
+}
+
+/* Quote form grid */
+.quote-form__grid{display:grid;grid-template-columns:1fr 340px;gap:1rem;align-items:start}
+.quote-side{display:flex;flex-direction:column;align-items:center;text-align:center}
+
+@media(max-width:900px){
+	.quote-form__grid{grid-template-columns:1fr}
+	.quote-side{order:2}
 }

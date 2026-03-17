@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Request a Quote — SNP Logistics LLC</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="/"> <img src="assets/icons/logo.svg" alt="SNP Logistics logo"/></a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="why-us.html">Why Choose Us</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="equipment.html">Equipment</a>
+        <a href="carriers.html">Carriers</a>
+        <a href="shippers.html">Shippers</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="quote-hero">
+      <div class="container">
+        <h1>Request a Quote</h1>
+        <p class="muted">Fill a few quick details and we'll provide a tailored rate.</p>
+      </div>
+    </section>
+
+    <section class="container quote-form">
+      <div class="quote-form__grid">
+        <div class="quote-wizard card">
+        <div class="wizard-head">
+          <div class="step-indicators">
+            <span class="step-indicator active" data-step="1">1</span>
+            <span class="step-indicator" data-step="2">2</span>
+            <span class="step-indicator" data-step="3">3</span>
+            <span class="step-indicator" data-step="4">4</span>
+          </div>
+        </div>
+
+        <form id="quoteWizard">
+          <!-- Step 1: Equipment type -->
+          <fieldset class="wizard-step" data-step="1">
+            <h2>Equipment Type</h2>
+            <p class="muted">Choose the equipment that fits your load.</p>
+            <div class="grid equipment-grid">
+              <label class="option"><input type="radio" name="equipment" value="truckload" required>
+                <img src="assets/icons/truck.svg" alt="truck icon"><span>Truckload (FTL)</span>
+              </label>
+              <label class="option"><input type="radio" name="equipment" value="ltl">
+                <img src="assets/icons/box.svg" alt="box icon"><span>LTL (Less-than-truckload)</span>
+              </label>
+              <label class="option"><input type="radio" name="equipment" value="reefer">
+                <img src="assets/icons/reefer.svg" alt="reefer icon"><span>Reefer (Temperature-controlled)</span>
+              </label>
+              <label class="option"><input type="radio" name="equipment" value="flatbed">
+                <img src="assets/icons/flatbed.svg" alt="flatbed icon"><span>Flatbed / Oversize</span>
+              </label>
+              <label class="option"><input type="radio" name="equipment" value="hazmat">
+                <img src="assets/icons/hotshot.svg" alt="hazmat icon"><span>Hazmat</span>
+              </label>
+              <label class="option"><input type="radio" name="equipment" value="poweronly">
+                <img src="assets/icons/power.svg" alt="power icon"><span>Power Only</span>
+              </label>
+            </div>
+            <div class="wizard-actions">
+              <button type="button" class="btn btn-primary next-btn">Next</button>
+            </div>
+          </fieldset>
+
+          <!-- Step 2: Pickup & Delivery -->
+          <fieldset class="wizard-step" data-step="2" hidden>
+            <h2>Pickup & Delivery</h2>
+            <label>Pickup city/state
+              <input name="pickup" required placeholder="City, State or ZIP">
+            </label>
+            <label>Delivery city/state
+              <input name="delivery" required placeholder="City, State or ZIP">
+            </label>
+            <label>Desired pickup date
+              <input name="pickupDate" type="date">
+            </label>
+            <div class="wizard-actions">
+              <button type="button" class="btn" class="back-btn">Back</button>
+              <button type="button" class="btn btn-primary next-btn">Next</button>
+            </div>
+          </fieldset>
+
+          <!-- Step 3: Cargo details -->
+          <fieldset class="wizard-step" data-step="3" hidden>
+            <h2>Cargo Details</h2>
+            <label>Commodity description
+              <input name="commodity" placeholder="e.g. electronics, produce">
+            </label>
+            <label>Weight (lbs)
+              <input name="weight" type="number" placeholder="Total weight in lbs">
+            </label>
+            <label>Dimensions (LxWxH in inches)
+              <input name="dimensions" placeholder="e.g. 48x40x60">
+            </label>
+            <label>Special instructions
+              <textarea name="instructions" rows="3" placeholder="Fragile, liftgate, residential delivery..."></textarea>
+            </label>
+            <div class="wizard-actions">
+              <button type="button" class="btn back-btn">Back</button>
+              <button type="button" class="btn btn-primary next-btn">Next</button>
+            </div>
+          </fieldset>
+
+          <!-- Step 4: Contact and submit -->
+          <fieldset class="wizard-step" data-step="4" hidden>
+            <h2>Contact & Submit</h2>
+            <label>Your name
+              <input name="name" required placeholder="Full name">
+            </label>
+            <label>Email
+              <input name="email" type="email" required placeholder="you@example.com">
+            </label>
+            <label>Phone
+              <input name="phone" placeholder="(555) 555-5555">
+            </label>
+            <div class="wizard-actions">
+              <button type="button" class="btn back-btn">Back</button>
+              <button type="submit" class="btn btn-primary">Request Quote</button>
+            </div>
+          </fieldset>
+        </form>
+        </div>
+
+        <aside class="quote-side card">
+          <h3>Need help choosing?</h3>
+          <p class="muted">Our team can recommend the best equipment and service level for your shipment.</p>
+          <img src="assets/icons/truck.svg" alt="truck" style="width:100%;max-width:420px;margin-top:1rem;opacity:.95">
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">&copy; SNP Logistics LLC</div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
