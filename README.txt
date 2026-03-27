@@ -2,7 +2,7 @@ SNP Logistics single-folder site
 
 What changed:
 - All pages are standalone HTML files with inline CSS and inline JS only.
-- Shared premium header/footer across every page.
+- Shared reliable header/footer across every page.
 - Logo updated to the live SVG URL you provided.
 - About page rewritten to sound credible and niche-specific.
 - Dummy testimonials added as placeholders.
